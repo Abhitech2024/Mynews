@@ -66,7 +66,7 @@ const LoginScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
     <Text style ={{color : 'black' ,fontSize : 60 , fontWeight :'bold'}}>Login</Text>
-    <Text style ={{color : 'grey' , fontSize : 15 , marginVertical: 5,paddingBottom:20 }}>Dear! User Enter your Details Here.</Text>
+    <Text style ={{color : 'grey' , fontSize : 15 , marginVertical: 5,paddingBottom:20 }}>Dear! User Enter your Details</Text>
      <TextInput
         style={styles.input}
         placeholder="Email"
