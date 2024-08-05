@@ -20,6 +20,8 @@ pod 'Firebase/Analytics'
 pod 'GoogleUtilities', :modular_headers => true
 pod 'FirebaseCoreInternal', :modular_headers =>true
 pod 'FirebaseCore', :modular_headers => true
+# pod 'Firebase/CoreOnly', '~> 11.0.0', :modular_headers => true
+# pod 'Firebase/Database', '~> 11.0.0', :modular_headers => true
 
 target 'Mynews' do
   config = use_native_modules!

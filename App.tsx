@@ -1,3 +1,36 @@
+import React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import RegisterScreen from './auth_register'; // Adjust path if needed
+import LoginScreen from './auth_login'; // Adjust path if needed
+import HelloScreen from './HelloScreen'; // Adjust path if needed
+
+const Stack = createNativeStackNavigator();
+
+function AppNavigator() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen name="Register" component={RegisterScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Hello" component={HelloScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default AppNavigator;
+
+
+
+
+
+
+
+
+
+
+
 // import React, { useState } from 'react';
 // import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 // import { Dropdown } from 'react-native-element-dropdown';
@@ -196,75 +229,76 @@
 
 
 
-import * as React from 'react';
-import { View, Text,Button,SafeAreaView,ScrollView,TextInput} from 'react-native';
-import { useEffect , useState} from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// import * as React from 'react';
+// import { View, Text,Button,SafeAreaView,ScrollView,TextInput} from 'react-native';
+// import { useEffect , useState} from 'react';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import { createDrawerNavigator } from '@react-navigation/drawer';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import Registration from './src/screens/Registration';
-import ContactForm from './src/screens/ContactForm';
-import Loginpassword from './src/screens/login2';
-import Newslist from './src/screens/Newslist';
-import HookEffect from './src/screens/HookEffect';
-import Storage from './src/screens/storage_practice';
-import HelloWorldPage from './Drawer_Nav/HelloWorldPage';
+// import Registration from './src/screens/Registration';
+// import ContactForm from './src/screens/ContactForm';
+// import Loginpassword from './src/screens/login2';
+// import Newslist from './src/screens/Newslist';
+// import HookEffect from './src/screens/HookEffect';
+// import Storage from './src/screens/storage_practice';
+// import HelloWorldPage from './Drawer_Nav/HelloWorldPage';
 
-import LoginPage from './mainLogin/LoginPage';
-import RegisterPage from './mainLogin/RegisterPage';
-import SecondLoginScreen from './mainLogin/SecondLoginScreen';
-//import DrawNavigation from './DrawNavigation';
-//import CustomDrawerContent from './CustomDrawer';
-import AboutScreen from './Drawer_Nav/AboutScreen';
-import ContactScreen from './Drawer_Nav/ContactScreen';
-import LogoutScreen from './Drawer_Nav/LogoutScreen';
-import BookmarkScreen from './Drawer_Nav/Bookmark';
+// import LoginPage from './mainLogin/LoginPage';
+// import RegisterPage from './mainLogin/RegisterPage';
+// import SecondLoginScreen from './mainLogin/SecondLoginScreen';
+// //import DrawNavigation from './DrawNavigation';
+// //import CustomDrawerContent from './CustomDrawer';
+// import AboutScreen from './Drawer_Nav/AboutScreen';
+// import ContactScreen from './Drawer_Nav/ContactScreen';
+// import LogoutScreen from './Drawer_Nav/LogoutScreen';
+// import BookmarkScreen from './Drawer_Nav/Bookmark';
 
-
-const Stack = createNativeStackNavigator();
-const Drawer = createDrawerNavigator();
-
-
-
-function DrawerNavigator() {
-  return (
-    <Drawer.Navigator>
-      <Drawer.Screen name="News" component={HelloWorldPage} />
-      <Drawer.Screen name="About" component={AboutScreen} />
-        <Drawer.Screen name="Contact Us" component={ContactScreen} />
-        <Drawer.Screen name="Bookmark" component={BookmarkScreen}/>
-        <Drawer.Screen name="Logout" component={LogoutScreen} />
-    </Drawer.Navigator>
-  );
-}
-
-// Main Stack Navigator
-export default function App() {
-
-  
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
-      <Stack.Screen name="Login" component={LoginPage} options={{headerShown : false}}/>
-        <Stack.Screen name="Registration" component={RegisterPage} />
-        <Stack.Screen name="SecondLogin" component={SecondLoginScreen} options ={{headerShown : false}} />
-        <Stack.Screen name="Home" component={DrawerNavigator} options={{headerShown : false}}  />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
 
 // const Stack = createNativeStackNavigator();
+// const Drawer = createDrawerNavigator();
 
+
+// function DrawerNavigator() {
+//   return (
+//     <Drawer.Navigator>
+//       <Drawer.Screen name="News" component={HelloWorldPage} />
+//       <Drawer.Screen name="About" component={AboutScreen} />
+//         <Drawer.Screen name="Contact Us" component={ContactScreen} />
+//         <Drawer.Screen name="Bookmark" component={BookmarkScreen}/>
+//         <Drawer.Screen name="Logout" component={LogoutScreen} />
+//     </Drawer.Navigator>
+//   );
+// }
+
+// // Main Stack Navigator
+// export default function App() {
+
+  
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator initialRouteName="Login">
+//       <Stack.Screen name="Login" component={LoginPage} options={{headerShown : false}}/>
+//         <Stack.Screen name="Registration" component={RegisterPage} />
+//         <Stack.Screen name="SecondLogin" component={SecondLoginScreen} options ={{headerShown : false}} />
+//         <Stack.Screen name="Home" component={DrawerNavigator} options={{headerShown : false}}  />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
+
+
+
+
+// const Stack = createNativeStackNavigator();
 // const App = () => {
 //   return (
 //     <NavigationContainer>
-      // <Stack.Navigator initialRouteName="Login">
-      //   <Stack.Screen name="Login" component={LoginPage} options={{headerShown : false}}/>
-//         <Stack.Screen name="Registration" component={RegisterPage} />
-        // <Stack.Screen name="SecondLogin" component={SecondLoginScreen} options ={{headerShown : false}} />
+    // <Stack.Navigator initialRouteName="Login">
+    //   <Stack.Screen name="Login" component={LoginPage} options={{headerShown : false}}/>
+    //   <Stack.Screen name="Registration" component={RegisterPage} />
+    //  <Stack.Screen name="SecondLogin" component={SecondLoginScreen} options ={{headerShown : false}} />
 //          <Stack.Screen name="HelloWorld" component={HelloWorldPage} /> 
 //         {/* <Stack.Screen name="Drawer" component ={DrawNavigation} />  */}
 //       </Stack.Navigator>

@@ -14,8 +14,8 @@ const Newslist = () => {
   useEffect(() => {
     // Fetch data from the API
     //fetch('https://newsapi.org/v2/everything?domains=wsj.com&apiKey=98649cd7fb29483896ebdf70ac6dc09c')
-    //fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=98649cd7fb29483896ebdf70ac6dc09c')
-    fetch('https://newsapi.org/v2/everything?q=apple&from=2024-07-17&to=2024-07-17&sortBy=popularity&apiKey=98649cd7fb29483896ebdf70ac6dc09c')
+    fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=98649cd7fb29483896ebdf70ac6dc09c')
+    //fetch('https://newsapi.org/v2/everything?q=apple&from=2024-07-17&to=2024-07-17&sortBy=popularity&apiKey=98649cd7fb29483896ebdf70ac6dc09c')
       .then(response => response.json())
       .then(data => {
         if (data.articles && data.articles.length > 0) {

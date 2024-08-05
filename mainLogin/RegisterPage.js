@@ -95,9 +95,9 @@ const RegistrationScreen = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            <Text style={{ color: 'black', fontSize: 60, fontWeight: 'bold' }}>Register</Text>
+            <Text style={{ color: 'blue', fontSize: 60, fontWeight: 'bold' }}>Register</Text>
             <Text style={{ color: 'grey', fontSize: 15, marginVertical: 5, paddingBottom: 15 }}>
-                Enter your Details to Register
+                Enter your Details to Register !
             </Text>
             <TextInput
                 style={styles.input}
@@ -181,7 +181,6 @@ const styles = StyleSheet.create({
         width: '80%',
     },
 });
-
 export default RegistrationScreen;
 
 
